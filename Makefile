@@ -53,8 +53,8 @@ else
 	WINE :=
 endif
 
-CC := $(WINE) ./armcc.exe
-AS := $(WINE) ./armasm.exe
+CC := arm-none-eabi-c++
+AS := arm-none-eabi-as
 LK := $(DEVKITARM)/bin/arm-none-eabi-gcc
 OBJCOPY := $(DEVKITARM)/bin/arm-none-eabi-objcopy
 
