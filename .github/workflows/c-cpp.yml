@@ -17,5 +17,6 @@ jobs:
   
     - name: make
       run: make setup
-    - name: make check
+    - name: make 
+      run: make
 
