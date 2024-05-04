@@ -4,7 +4,7 @@ CAPSTONE_LIB := $(CAPSTONE_DIR)/libcapstone.a
 
 DEBUG ?= 0
 
-CC := arm--none-eabi-gcc
+CC := arm-none-eabi-gcc
 CFLAGS := -isystem $(CAPSTONE_DIR)/include -Wall -Wextra -Wpedantic
 ifeq ($(DEBUG),1)
 CFLAGS += -O0 -g -fsanitize=address
@@ -17,7 +17,7 @@ LIBS := $(CAPSTONE_LIB)
 
 # Compile the program
 $(PROGRAM): $(SOURCES) $(CAPSTONE_LIB)
-	$(CC) $(CFLAGS) $^ -o $@
+	arm-none-eabi-gcc $(CFLAGS) $^ -o $@
 
 # Build libcapstone
 $(CAPSTONE_LIB): $(CAPSTONE_DIR)
