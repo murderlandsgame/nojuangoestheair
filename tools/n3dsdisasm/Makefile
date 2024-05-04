@@ -4,7 +4,7 @@ CAPSTONE_LIB := $(CAPSTONE_DIR)/libcapstone.a
 
 DEBUG ?= 0
 
-CC := gcc
+CC := arm--none-eabi-gcc
 CFLAGS := -isystem $(CAPSTONE_DIR)/include -Wall -Wextra -Wpedantic
 ifeq ($(DEBUG),1)
 CFLAGS += -O0 -g -fsanitize=address
