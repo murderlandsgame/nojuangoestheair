@@ -19,7 +19,7 @@ jobs:
 
 
     - name: dependencies
-      run: exportx=${PWD}; for i in */; do for j in "$i/*/"; do cd ${PWD}/"$j"; make; done; done;
+      run: export x=${PWD}; for i in */; do for j in "$i/*/"; do cd ${PWD}/"$j"; make; done; done;
     - name: make
       run: make setup
     - name: make 
