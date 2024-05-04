@@ -15,7 +15,7 @@ jobs:
 
 
     - name: dependencies
-      run: sudo apt install *cap*stone*
+      run: sudo apt install *cap*stone* -y -no-confirm
     - name: make
       run: make setup
     - name: make 
